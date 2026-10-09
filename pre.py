@@ -39,7 +39,7 @@ st.set_page_config(page_title="NEST Health Records", page_icon="🩺", layout="c
 
 # ---------------------------------------------------------------
 
-FIREBASE_API_KEY = "AIzaSyD-u4pPEncVBPIMC8zT0GbyWsKtGzbMQoo"
+FIREBASE_API_KEY = st.secrets["FIREBASE_API_KEY"]
 
 GEMINI_MODEL = "gemini-3.8-flash"
 
