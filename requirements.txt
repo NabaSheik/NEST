@@ -1,0 +1,6 @@
+streamlit
+firebase-admin
+pytesseract
+requests
+Pillow
+PyMuPDF
