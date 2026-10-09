@@ -45,9 +45,9 @@ GEMINI_MODEL = "gemini-3.8-flash"
 
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]         # optional: paste key from aistudio.google.com/apikey
 
-SMTP_USER = "sheiknaba305@gmail.com"               # your Gmail address (for email alerts)
-
-SMTP_PASSWORD = ""           # 16-letter Gmail App Password
+          # 16-letter Gmail App Password
+SMTP_USER = st.secrets["SMTP_USER"]
+SMTP_PASSWORD = st.secrets["SMTP_PASSWORD"].replace(" ", "")
 
 SERVICE_ACCOUNT_FILE = str(Path(__file__).resolve().parent / "serviceAccountKey.json")   # keep this file next to app.py
 
