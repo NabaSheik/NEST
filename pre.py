@@ -1,5 +1,6 @@
 import io
 from pathlib import Path
+import ssl
 
 import pymupdf
 import random
@@ -292,6 +293,12 @@ def save_record():
         f"Hello {pt['name']},\n\n{me['name']} ({ROLE_LABEL[me['role']]}) added a new {rtype} "
 
         f"to your health record.\n\nLog in to NEST to view it.",
+            with smtplib.SMTP("smtp.gmail.com", 587, timeout=20) as s:
+            s.ehlo()
+            s.starttls(context=ssl.create_default_context())
+            s.ehlo()
+            s.login(SMTP_USER, SMTP_PASSWORD)
+            s.send_message(msg)
 
     )
 
