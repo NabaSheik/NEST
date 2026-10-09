@@ -304,7 +304,8 @@ def save_record():
 
 def login_page():
 
-    st.title("🩺 NEST Health Records By NABA")
+    st.title("🩺 NEST Health Records")
+    st.caption("-By Naba")
 
     role = st.radio("I am a", list(ROLE_LABEL), format_func=ROLE_LABEL.get, horizontal=True)
 
