@@ -13,6 +13,7 @@ from email.message import EmailMessage
 import firebase_admin
 
 import pytesseract
+import json
 
 
 
@@ -58,7 +59,11 @@ SERVICE_ACCOUNT_FILE = str(Path(__file__).resolve().parent / "serviceAccountKey.
 
 if not firebase_admin._apps:
 
-    firebase_admin.initialize_app(credentials.Certificate(SERVICE_ACCOUNT_FILE))
+    firebase_admin.initialize_app(
+    credentials.Certificate(
+        json.loads(st.secrets["FIREBASE_SERVICE_ACCOUNT"])
+    )
+)
 
 db = firestore.client()
 
