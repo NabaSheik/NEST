@@ -43,7 +43,7 @@ FIREBASE_API_KEY = "AIzaSyD-u4pPEncVBPIMC8zT0GbyWsKtGzbMQoo"
 
 GEMINI_MODEL = "gemini-3.8-flash"
 
-GEMINI_API_KEY = "AQ.Ab8RN6JCH_NvQ4dXE8RspdAp2uHwOAZKsvfSRO3RIei3zcoPKg"          # optional: paste key from aistudio.google.com/apikey
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]         # optional: paste key from aistudio.google.com/apikey
 
 SMTP_USER = "sheiknaba305@gmail.com"               # your Gmail address (for email alerts)
 
